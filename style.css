@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.6;
+}
+
+.navbar {
+  background: #e8f7ee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  border-bottom: 2px solid #c8e6d2;
+}
+
+.navbar h1 {
+  color: #2e7d32;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 18px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #2e7d32;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 10%;
+  background: #f9fff9;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.wheel-section,
+.single-wheel {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 8%;
+  flex-wrap: wrap;
+}
+
+.wheel-card {
+  background: #ffffff;
+  border: 2px solid #d8eadc;
+  border-radius: 18px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+  position: relative;
+}
+
+.wheel-card h3 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+.pointer {
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 28px solid #2e7d32;
+  margin: 0 auto 8px;
+}
+
+.wheel {
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  border: 8px solid #2e7d32;
+  transition: transform 3s ease-out;
+  position: relative;
+  background: conic-gradient(
+    #b7e4c7 0deg 45deg,
+    #d8f3dc 45deg 90deg,
+    #95d5b2 90deg 135deg,
+    #f1faee 135deg 180deg,
+    #b7e4c7 180deg 225deg,
+    #d8f3dc 225deg 270deg,
+    #95d5b2 270deg 315deg,
+    #f1faee 315deg 360deg
+  );
+}
+
+.large-wheel {
+  width: 280px;
+  height: 280px;
+}
+
+.small-wheel {
+  width: 220px;
+  height: 220px;
+}
+
+.wheel span {
+  position: absolute;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #1b4332;
+}
+
+.wheel span:nth-child(1) { transform: rotate(0deg) translateY(-95px); }
+.wheel span:nth-child(2) { transform: rotate(45deg) translateY(-95px); }
+.wheel span:nth-child(3) { transform: rotate(90deg) translateY(-95px); }
+.wheel span:nth-child(4) { transform: rotate(135deg) translateY(-95px); }
+.wheel span:nth-child(5) { transform: rotate(180deg) translateY(-95px); }
+.wheel span:nth-child(6) { transform: rotate(225deg) translateY(-95px); }
+.wheel span:nth-child(7) { transform: rotate(270deg) translateY(-95px); }
+.wheel span:nth-child(8) { transform: rotate(315deg) translateY(-95px); }
+.wheel span:nth-child(9) { transform: rotate(25deg) translateY(-70px); }
+.wheel span:nth-child(10) { transform: rotate(65deg) translateY(-70px); }
+
+button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1b5e20;
+}
+
+.result {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.content h2 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+.content p {
+  margin-bottom: 15px;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+  padding: 30px 8%;
+}
+
+.food-grid div {
+  background: #f9fff9;
+  border: 1px solid #d8eadc;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.food-grid h3 {
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #c8e6d2;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.email {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  background: #e8f7ee;
+  padding: 18px;
+  margin-top: 40px;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .large-wheel {
+    width: 230px;
+    height: 230px;
+  }
+
+  .small-wheel {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+}
